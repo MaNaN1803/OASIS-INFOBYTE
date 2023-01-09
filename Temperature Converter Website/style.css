@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --primary-color: rgb(44, 147, 181);
+
+}
+body{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    
+   background-image: url(bgc.webp);
+    overflow: hidden;
+}
+.temp{
+    min-width: 530px;
+    width: 40vw;
+    min-height: 340px;
+    height: 54vh;
+    border-radius: 36px;
+    background-color: rgb(6, 55, 125);
+    box-shadow: 5px 5px 9px grey,-5px -5px 9px #ffff;
+    padding: 20px 20px;
+    margin: 20px;
+}
+.h1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 31px;
+    background: linear-gradient(145deg,rgb(74, 38, 157),rgb(160, 163, 203));
+    box-shadow: 5px 5px 8px #ffff,5px 5px 8px grey;
+
+
+}
+.fa-temperature-high{
+    font-size: 70px;
+}
+.tempsymbol{
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0 20px;
+    font-size: 60px;
+    margin: 15px 0;
+    border-radius: 36px;
+    box-shadow: inset 6px 6px 4px rgb(5, 6, 39),inset -6px -6px 4px rgb(5, 23, 67);
+}
+.tempicon{
+    font-size: 70px;
+
+}
+.tempinput{
+    height: 100px;
+    display: flex;  
+    justify-content: space-evenly;
+    align-items: center;
+}
+input{
+    padding: 10px; 
+    font-weight: bold; 
+    border: none;
+    border-radius: 36px;
+    box-shadow: inset 6px 6px 4px #c5c5c5, I inset -6px -6px 4px #fbfbfb;
+    outline: none;
+    background: #e0e0e0;
+}
+.textcelsius,.textfahrenheit{
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+
+}
+@media(max-width: 752px){
+    .temp{
+        min-width: 400px;
+        height: auto;
+    }
+    .h1{
+        font-size: 25px;
+    }
+    .fa-temperature-high{
+        font-size: 50px;
+    }
+    .textsymbol{
+        height: auto;
+    }
+    .tempinput{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .celsius,.fahrenheit,input{
+        width: 100%;
+
+    }
+    @media(max-width: 433px;){
+        .temp{
+            min-width: 300px;
+            
+        }
+    }
+}

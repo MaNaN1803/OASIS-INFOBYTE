@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+    <script src="cal.js"></script>
+
+    <title>Temperature Converter</title>
+    <link rel="icon" type="image/x-icon" href="icons8-temperature-high-100.png">
+</head>
+<body>
+    <div class="temp">
+        <div class="temp1">
+            <span class="h1">Temperature Converter</span>
+            <span class="tempicon"><i class='fas fa-temperature-high' style='font-size:24px'></i></span>
+        </div>
+        <div class="tempsymbol">
+            <span>&#8451 &#8457</span>
+            <span class="tempicon2">
+                <i class='fas fa-cloud-sun-rain' style='font-size:24px'></i></span>
+        </div>
+        <div class="tempinput">
+            <div class="celsius">
+                <span class="textcelsius">Celsius &#8451</span>
+                <input type="number" value="0" id="celsius">
+            </div>
+            <div class="fahrenheit">
+                <span class="textfahrenheit">Fahrenheit &#8457</span>
+                <input type="number" value="32" id="fahrenheit">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var celsius =document.getElementById("celsius");
+
+var fahrenheit =document.getElementById("fahrenheit");
+
+celsius.addEventListener('input' , function(){
+    let cel =this.Value;
+    let fah = (cel * 9/5) + 32;
+if(!Number.isInteger (fah)){ 
+    fah = fah.toFixed(4);
+
+}
+fahrenheit.value = fah;
+});
+
+fahrenheit.addEventListener('input', function(){
+       let fah = this.value;
+    
+    let cel = (fah-32) * 5/9 ;
+   
+    if(!Number.isInteger(cel)) {
+         cel = cel.toFixed(4);
+    
+    
+    }
+    
+    celsius.value = cel;
+}); 
+</script>
+</html>
